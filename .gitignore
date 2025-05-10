@@ -1,0 +1,16 @@
+# Abaikan virtual environment
+env/
+
+# Abaikan file Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Abaikan file database dan data lokal
+*.csv
+*.db
+
+# Abaikan file sistem & editor
+.DS_Store
+.ipynb_checkpoints/
