@@ -1,10 +1,12 @@
 import requests
 import psycopg2
 from datetime import datetime
+from dotenv import load_dotenv
 import os
 
 # Konfigurasi API dan database
-API_KEY = "098066c5fd9edcaadd7f7522e4930b47"
+load_dotenv()  # ini otomatis cari file .env di root
+API_KEY = os.getenv("OPENWEATHERMAP_API_KEY")
 KOTA = "Jakarta"
 DB_CONFIG = {
     "host": "localhost",

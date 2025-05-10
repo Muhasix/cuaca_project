@@ -14,3 +14,4 @@ __pycache__/
 # Abaikan file sistem & editor
 .DS_Store
 .ipynb_checkpoints/
+.env

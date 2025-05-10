@@ -1,3 +1,8 @@
 ✅ Data berhasil diambil dan disimpan.
 ✅ Data berhasil diambil dan disimpan.
 ✅ Data berhasil diambil dan disimpan.
+❌ Gagal: HTTPConnectionPool(host='api.openweathermap.org', port=80): Max retries exceeded with url: /data/2.5/weather?q=Jakarta&appid=098066c5fd9edcaadd7f7522e4930b47&units=metric (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x7fd5fdf6e7a0>: Failed to resolve 'api.openweathermap.org' ([Errno -3] Temporary failure in name resolution)"))
+✅ Data berhasil diambil dan disimpan.
+✅ Data berhasil diambil dan disimpan.
+✅ Data berhasil diambil dan disimpan.
+✅ Data berhasil diambil dan disimpan.
