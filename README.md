@@ -64,7 +64,15 @@ pip install -r requirements.txt
 ### 2. Buat file `.env`
 
 ```env
+# API key untuk OpenWeatherMap (wajib untuk fetch_data.py)
 OPENWEATHER_API_KEY=masukkan_api_key_anda
+
+# Konfigurasi database PostgreSQL
+PGHOST=localhost            # ini saat lokal; ganti otomatis oleh Railway saat deploy
+PGDATABASE=cuaca_db
+PGUSER=cuaca_user
+PGPASSWORD=cuaca_pass
+PGPORT=5432
 ```
 
 ### 3. Setup PostgreSQL

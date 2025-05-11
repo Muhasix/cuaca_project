@@ -1,12 +1,17 @@
 import psycopg2
+import os
+from dotenv import load_dotenv
+
+# Muat file .env
+load_dotenv()
 
 try:
     conn = psycopg2.connect(
-        dbname="cuaca_db",
-        user="cuaca_user",
-        password="cuaca_pass",
-        host="localhost",
-        port="5432"
+        dbname=os.getenv("PGDATABASE"),
+        user=os.getenv("PGUSER"),
+        password=os.getenv("PGPASSWORD"),
+        host=os.getenv("PGHOST"),
+        port=os.getenv("PGPORT")
     )
     print("✅ Koneksi ke PostgreSQL berhasil.")
     conn.close()

@@ -3,13 +3,18 @@ import pandas as pd
 import altair as alt
 from sqlalchemy import create_engine
 import time
+import os
+from dotenv import load_dotenv
+
+# Muat file .env DB_CONFIG
+load_dotenv()
 
 # --- Konfigurasi koneksi database PostgreSQL ---
 DB_CONFIG = {
-    "host": "localhost",
-    "dbname": "cuaca_db",
-    "user": "cuaca_user",
-    "password": "cuaca_pass"
+    "host": os.getenv("PGHOST"),
+    "dbname": os.getenv("PGDATABASE"),
+    "user": os.getenv("PGUSER"),
+    "password": os.getenv("PGPASSWORD")
 }
 
 # Buat URL koneksi SQLAlchemy

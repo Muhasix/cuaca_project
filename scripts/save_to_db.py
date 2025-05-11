@@ -1,13 +1,18 @@
 import pandas as pd
 import psycopg2
 from psycopg2 import sql
+import os
+from dotenv import load_dotenv
+
+# Muat file .env
+load_dotenv()
 
 # Konfigurasi koneksi
-DB_NAME = "cuaca_db"
-DB_USER = "cuaca_user"
-DB_PASSWORD = "cuaca_pass"
-DB_HOST = "localhost"
-DB_PORT = "5432"
+DB_NAME = os.getenv("PGDATABASE")
+DB_USER = os.getenv("PGUSER")
+DB_PASSWORD = os.getenv("PGPASSWORD")
+DB_HOST = os.getenv("PGHOST")
+DB_PORT = os.getenv("PGPORT")
 
 # Baca data dari CSV
 csv_file = "data/processed/cuaca_bersih.csv"

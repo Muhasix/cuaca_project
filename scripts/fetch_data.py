@@ -6,7 +6,7 @@ import time
 import logging
 from dotenv import load_dotenv
 
-# Muat file .env untuk API key
+# Muat file .env untuk API key dan DB_CONFIG
 load_dotenv()
 
 # Konfigurasi logging
@@ -26,11 +26,12 @@ KOTA_LIST = ["Jakarta", "Bandung", "Surabaya", "Yogyakarta", "Medan"]
 
 # Konfigurasi PostgreSQL
 DB_CONFIG = {
-    "host": "localhost",
-    "dbname": "cuaca_db",
-    "user": "cuaca_user",
-    "password": "cuaca_pass"
+    "host": os.getenv("PGHOST"),
+    "dbname": os.getenv("PGDATABASE"),
+    "user": os.getenv("PGUSER"),
+    "password": os.getenv("PGPASSWORD")
 }
+
 
 # Ambil data cuaca, dengan retry jika gagal
 def fetch_weather_data(kota, retries=3, delay=3):

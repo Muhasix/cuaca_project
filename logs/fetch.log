@@ -270,3 +270,14 @@ a967f3ab23ae4b6149de94cc5ba1276f
 2025-05-11 14:46:15,445 - INFO - Fetching: Medan
 2025-05-11 14:46:15,544 - INFO - ✅ Medan: Data berhasil diambil.
 2025-05-11 14:46:15,553 - INFO - 📦 Semua data berhasil disimpan ke database.
+2025-05-11 20:49:27,013 - INFO - Fetching: Jakarta
+2025-05-11 20:49:27,096 - INFO - ✅ Jakarta: Data berhasil diambil.
+2025-05-11 20:49:27,096 - INFO - Fetching: Bandung
+2025-05-11 20:49:27,193 - INFO - ✅ Bandung: Data berhasil diambil.
+2025-05-11 20:49:27,193 - INFO - Fetching: Surabaya
+2025-05-11 20:49:27,280 - INFO - ✅ Surabaya: Data berhasil diambil.
+2025-05-11 20:49:27,280 - INFO - Fetching: Yogyakarta
+2025-05-11 20:49:27,377 - INFO - ✅ Yogyakarta: Data berhasil diambil.
+2025-05-11 20:49:27,377 - INFO - Fetching: Medan
+2025-05-11 20:49:27,459 - INFO - ✅ Medan: Data berhasil diambil.
+2025-05-11 20:49:27,490 - INFO - 📦 Semua data berhasil disimpan ke database.
