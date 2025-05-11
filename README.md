@@ -46,7 +46,7 @@ cuaca\_project/
 ### 1. Clone & install environment
 
 ```bash
-git clone https://github.com/username/cuaca_project.git
+git clone https://github.com/Muhasix/cuaca_project.git
 cd cuaca_project
 python3 -m venv env
 source env/bin/activate
