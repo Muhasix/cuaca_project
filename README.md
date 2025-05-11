@@ -1,100 +1,90 @@
 # 🌤️ Dashboard Cuaca Indonesia
 
-Dashboard Streamlit yang menampilkan data cuaca real-time dari berbagai kota di Indonesia. Data diambil dari API OpenWeatherMap dan disimpan otomatis ke PostgreSQL, dengan visualisasi interaktif menggunakan **Altair**.
-
-![Dashboard Screenshot](screenshot.png)
-
----
-
-## 🚀 Fitur Utama
-
-- ✅ Data suhu dan kelembapan real-time dari banyak kota
-- 🔁 Auto-refresh setiap 60 detik
-- 📊 Grafik interaktif (Altair): suhu, kelembapan, dan rata-rata harian
-- 🗂️ Filter multi-kota langsung dari UI
-- 📥 Data disimpan otomatis ke PostgreSQL via script
-- 🧠 Cache dan optimisasi query
-- 🕒 Otomatisasi lewat cron
-- 🔐 Keamanan API key melalui `.env`
+[![Live](https://img.shields.io/website?url=https://cuacaproject1.up.railway.app&label=Dashboard&style=flat-square)](https://cuacaproject1.up.railway.app)
+[![GitHub last commit](https://img.shields.io/github/last-commit/Muhasix/cuaca_project?style=flat-square)](https://github.com/Muhasix/cuaca_project)
+[![Python](https://img.shields.io/badge/Python-3.10+-blue?style=flat-square&logo=python)](https://www.python.org/)
 
 ---
 
-## 🧰 Teknologi
+## 🚀 Fitur
 
-- [Python](https://python.org)
-- [Streamlit](https://streamlit.io)
-- [PostgreSQL](https://www.postgresql.org)
-- [Altair](https://altair-viz.github.io)
-- Pandas, SQLAlchemy, psycopg2, python-dotenv
+- Ambil data cuaca otomatis dari OpenWeatherMap API
+- Mendukung multi-kota: Jakarta, Bandung, Surabaya, dll.
+- Simpan data ke PostgreSQL (lokal & Railway)
+- Dashboard real-time dengan auto-refresh
+- Otomatisasi fetch via cron di Railway
 
 ---
 
-## 📂 Struktur Folder
+## 🖥️ Tampilan
+
+![screenshot](screenshot.png)
+
+---
+
+## 🗂️ Struktur Proyek
+
+<details>
+<summary>📁 Klik untuk lihat</summary>
 
 ```
 
 cuaca\_project/
 ├── dashboard/
-│   └── app.py              # Aplikasi Streamlit
+│   └── app.py                  # Dashboard Streamlit
+├── data/                       # (Opsional jika pakai CSV)
+│   ├── raw/
+│   └── processed/
 ├── scripts/
-│   └── fetch\_data.py       # Ambil data dari API & simpan ke DB
-├── logs/
-│   └── fetch.log           # Logging otomatisasi
-├── .env                    # API key (tidak di-commit)
+│   ├── fetch\_data.py           # Ambil data cuaca ke DB
+│   └── migrate\_to\_railway.py   # Migrasi manual dari lokal ke cloud
+├── tools/
+│   └── migrate\_to\_railway.py   # Bisa dipindah ke sini
+├── .env                        # Env lokal (diabaikan Git)
+├── migrate.env                 # Env Railway (jangan di-commit)
 ├── requirements.txt
-├── README.md
-└── screenshot.png
+├── .gitignore
+└── README.md
 
 ````
+
+</details>
 
 ---
 
-## ⚙️ Instalasi & Setup
+## ⚙️ Instalasi Lokal
 
-### 1. Clone & buat virtual environment
-
+1. Clone repo:
 ```bash
 git clone https://github.com/Muhasix/cuaca_project.git
 cd cuaca_project
-python3 -m venv env
-source env/bin/activate
-pip install -r requirements.txt
 ````
 
-### 2. Buat file `.env`
+2. Buat virtual environment & aktifkan:
+
+```bash
+python3 -m venv env
+source env/bin/activate
+```
+
+3. Install dependency:
+
+```bash
+pip install -r requirements.txt
+```
+
+4. Buat file `.env` dan isi:
 
 ```env
-# API key untuk OpenWeatherMap (wajib untuk fetch_data.py)
-OPENWEATHER_API_KEY=masukkan_api_key_anda
-
-# Konfigurasi database PostgreSQL
-PGHOST=localhost            # ini saat lokal; ganti otomatis oleh Railway saat deploy
+OPENWEATHER_API_KEY=your_api_key
+PGHOST=localhost
 PGDATABASE=cuaca_db
 PGUSER=cuaca_user
 PGPASSWORD=cuaca_pass
 PGPORT=5432
 ```
 
-### 3. Setup PostgreSQL
-
-```sql
--- Masuk ke PostgreSQL:
-sudo -u postgres psql
-
--- Jalankan:
-CREATE USER cuaca_user WITH PASSWORD 'cuaca_pass';
-CREATE DATABASE cuaca_db OWNER cuaca_user;
-GRANT ALL PRIVILEGES ON DATABASE cuaca_db TO cuaca_user;
-\q
-```
-
-### 4. Jalankan script ambil data
-
-```bash
-python scripts/fetch_data.py
-```
-
-### 5. Jalankan dashboard
+5. Jalankan dashboard:
 
 ```bash
 streamlit run dashboard/app.py
@@ -102,39 +92,39 @@ streamlit run dashboard/app.py
 
 ---
 
-## 🔁 Otomatisasi (Cron)
+## ☁️ Deployment di Railway
 
-Edit crontab:
+* Setup PostgreSQL dan Streamlit di Railway
+* Tambahkan variabel `.env` di Railway Environment tab
+* Gunakan **Pre-deploy command** untuk `fetch_data.py`
+* Gunakan **Cron Schedule** untuk auto-refresh data
+
+---
+
+## 📦 Migrasi Data Lokal ke Railway (opsional)
+
+1. Siapkan `migrate.env`:
+
+```env
+PGHOST=your_railway_host
+PGPORT=your_railway_port
+PGUSER=postgres
+PGPASSWORD=your_password
+PGDATABASE=railway
+```
+
+2. Jalankan migrasi dari lokal:
 
 ```bash
-crontab -e
-```
-
-Tambahkan:
-
-```bash
-*/30 * * * * /home/username/projects/cuaca_project/env/bin/python /home/username/projects/cuaca_project/scripts/fetch_data.py >> /home/username/projects/cuaca_project/logs/cron.log 2>&1
+python scripts/migrate_to_railway.py
 ```
 
 ---
 
-## 🔒 Keamanan
+## 📄 Lisensi
 
-Pastikan `.env` dan `logs/` **masuk dalam `.gitignore`**:
-
-```
-.env
-logs/
-```
+MIT License — bebas digunakan, dimodifikasi, dan dikembangkan.
 
 ---
 
-## 📃 Lisensi
-
-MIT License – Bebas digunakan dan dimodifikasi.
-
----
-
-## 🙋 Kontribusi
-
-Saran, issue, dan pull request sangat terbuka!
+Sukses deploy? ✨ Update link dashboard-nya ya!
