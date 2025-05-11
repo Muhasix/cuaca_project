@@ -1,171 +1,123 @@
-Berikut adalah versi **lengkap dan utuh** dari `README.md` untuk proyek cuaca Anda, disusun rapi dan siap langsung dipakai:
 
 ---
 
-````markdown
-# 🌤️ Cuaca Project - Dashboard Cuaca Indonesia
+```markdown
+# 🌤️ Cuaca Dashboard
 
-Proyek ini menampilkan data cuaca real-time dari beberapa kota besar di Indonesia. Data diambil dari [OpenWeather API](https://openweathermap.org/api), disimpan ke PostgreSQL, dan divisualisasikan dalam dashboard interaktif menggunakan Streamlit.
+Aplikasi dashboard Streamlit untuk menampilkan data cuaca real-time dari beberapa kota di Indonesia menggunakan API OpenWeatherMap dan PostgreSQL sebagai penyimpanan data.
 
----
+## 🚀 Fitur
 
-## 📌 Fitur
+- Ambil data cuaca (temperatur, kelembapan, kondisi langit) dari beberapa kota
+- Simpan data secara berkala ke PostgreSQL
+- Dashboard interaktif dengan filter kota & grafik tren suhu dan kelembapan
+- Otomatisasi dengan cronjob
+- Logging aktivitas dan error
+- Keamanan API key melalui file `.env`
 
-- 🔄 Pengambilan data cuaca otomatis dari berbagai kota (Jakarta, Bandung, Surabaya, Yogyakarta, Medan)
-- 🗃️ Penyimpanan data historis ke PostgreSQL
-- 📊 Visualisasi data dalam bentuk tabel dan grafik (suhu & kelembapan)
-- 🕒 Auto-refresh dashboard untuk update data terbaru
-- 🧩 Otomatisasi pengambilan data via cron job
+## 🧩 Teknologi
 
----
+- Python
+- Streamlit
+- PostgreSQL
+- OpenWeatherMap API
+- Pandas, psycopg2, SQLAlchemy, dotenv
 
-## 🚀 Instalasi
+## 📸 Dashboard
 
-### 1. Clone Repository
+![Dashboard Screenshot](screenshot.png)
+
+## 📦 Struktur Folder
+
+```
+
+cuaca\_project/
+├── dashboard/
+│   └── app.py              # Aplikasi Streamlit
+├── scripts/
+│   └── fetch\_data.py       # Script pengambilan data cuaca
+├── logs/
+│   └── fetch.log           # Log pengambilan data
+├── .env                    # File API key
+├── requirements.txt
+├── README.md
+
+````
+
+## ⚙️ Setup
+
+### 1. Clone & install environment
 
 ```bash
 git clone https://github.com/username/cuaca_project.git
 cd cuaca_project
+python3 -m venv env
+source env/bin/activate
+pip install -r requirements.txt
 ````
 
-### 2. Buat dan Aktifkan Virtual Environment
+### 2. Buat file `.env`
 
-```bash
-python -m venv env
-source env/bin/activate
+```env
+OPENWEATHER_API_KEY=your_api_key_here
 ```
 
-### 3. Install Dependensi
-
-```bash
-pip install -r requirements.txt
-```
-
----
-
-## 🔐 Konfigurasi API Key
-
-Buat file `.env` di direktori utama proyek:
-
-```
-OPENWEATHER_API_KEY=masukkan_api_key_anda_di_sini
-```
-
-Tambahkan juga file `.env` ke `.gitignore` agar tidak ikut di-push ke GitHub:
-
-```
-.env
-```
-
----
-
-## 🗃️ Setup PostgreSQL
-
-### 1. Buat user dan database
-
-Masuk ke shell PostgreSQL:
-
-```bash
-sudo -u postgres psql
-```
-
-Lalu jalankan:
+### 3. Setup PostgreSQL
 
 ```sql
+-- Masuk ke PostgreSQL shell:
+sudo -u postgres psql
+
+-- Jalankan:
 CREATE USER cuaca_user WITH PASSWORD 'cuaca_pass';
 CREATE DATABASE cuaca_db OWNER cuaca_user;
 GRANT ALL PRIVILEGES ON DATABASE cuaca_db TO cuaca_user;
 \q
 ```
 
----
+> Gunakan PostgreSQL default authentication (tanpa ubah `pg_hba.conf` bila sudah bisa konek)
 
-## 🔁 Jalankan Pengambilan Data Manual
-
-Untuk mencoba menjalankan pengambilan data secara manual:
+### 4. Tes ambil dan simpan data
 
 ```bash
 python scripts/fetch_data.py
 ```
 
-Jika berhasil, data akan disimpan ke tabel `cuaca` di database `cuaca_db`.
-
----
-
-## 📺 Jalankan Dashboard
+### 5. Jalankan dashboard
 
 ```bash
 streamlit run dashboard/app.py
 ```
 
-Dashboard akan terbuka di browser dan menampilkan data cuaca terbaru secara interaktif.
+## 🔁 Otomatisasi dengan Cron
 
----
-
-## ⏰ Otomatisasi dengan Cron (Linux)
-
-Buka crontab:
+Edit crontab:
 
 ```bash
 crontab -e
 ```
 
-Tambahkan baris berikut untuk menjalankan setiap 5 menit:
+Tambahkan baris berikut (setiap 30 menit):
 
+```bash
+*/30 * * * * /home/username/projects/cuaca_project/env/bin/python /home/username/projects/cuaca_project/scripts/fetch_data.py >> /home/username/projects/cuaca_project/logs/cron.log 2>&1
 ```
-*/5 * * * * /home/username/projects/cuaca_project/env/bin/python /home/username/projects/cuaca_project/scripts/fetch_data.py >> /home/username/projects/cuaca_project/logs/cron.log 2>&1
-```
 
-Pastikan direktori `logs/` sudah dibuat.
+## 🔐 Keamanan
 
----
+* Pastikan `.env` masuk dalam `.gitignore`:
 
-## 🧾 Struktur Folder
+  ```
+  .env
+  logs/
+  ```
 
-```
-cuaca_project/
-├── dashboard/
-│   └── app.py               # Streamlit dashboard
-├── logs/
-│   └── cron.log             # Log hasil cron job
-├── scripts/
-│   └── fetch_data.py        # Script fetch dan simpan cuaca
-├── .env                     # File rahasia API key
-├── .gitignore
-├── requirements.txt
-└── README.md
+* Jangan pernah upload `.env` ke GitHub
+
+## 📑 Lisensi
+
+MIT License – bebas digunakan, modifikasi, dan kontribusi.
+
 ```
 
 ---
-
-## 📸 Screenshot
-
-Tambahkan screenshot dashboard Anda (opsional):
-
-```
-![Dashboard Cuaca](screenshot.png)
-```
-
----
-
-## 🔒 Keamanan
-
-* Pastikan `.env` **tidak pernah** di-commit ke GitHub.
-* Gunakan `.gitignore` untuk menghindari kebocoran API key.
-
----
-
-## 📝 Lisensi
-
-Proyek ini bebas digunakan untuk pembelajaran dan pengembangan pribadi. Tidak untuk penggunaan komersial tanpa izin eksplisit.
-
----
-
-## 🙌 Kontribusi
-
-Pull request, issue, dan masukan sangat diterima! Jangan ragu untuk fork dan mengembangkan.
-
----
-
-```
-
