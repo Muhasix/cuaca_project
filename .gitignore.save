@@ -7,6 +7,9 @@ __pycache__/
 *.pyo
 *.pyd
 
+# Jupyter
+*.ipynb_checkpoints/
+
 # Abaikan file database dan data lokal
 *.csv
 *.db

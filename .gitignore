@@ -11,10 +11,12 @@ __pycache__/
 # Abaikan file database dan data lokal
 *.csv
 *.db
+*.sql
 
 # Abaikan file sistem & editor
 .DS_Store
 .ipynb_checkpoints/
 .env
-.log
+*.env
+*.log
 .env.*
