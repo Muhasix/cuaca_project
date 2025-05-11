@@ -28,7 +28,7 @@ Aplikasi dashboard Streamlit untuk menampilkan data cuaca real-time dari beberap
 
 ## 📦 Struktur Folder
 
-
+```
 cuaca\_project/
 ├── dashboard/
 │   └── app.py              # Aplikasi Streamlit
@@ -39,7 +39,7 @@ cuaca\_project/
 ├── .env                    # File API key
 ├── requirements.txt
 ├── README.md
-
+```
 
 ## ⚙️ Setup
 
