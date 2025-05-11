@@ -1,7 +1,6 @@
 
 ---
 
-```markdown
 # 🌤️ Cuaca Dashboard
 
 Aplikasi dashboard Streamlit untuk menampilkan data cuaca real-time dari beberapa kota di Indonesia menggunakan API OpenWeatherMap dan PostgreSQL sebagai penyimpanan data.
@@ -29,7 +28,6 @@ Aplikasi dashboard Streamlit untuk menampilkan data cuaca real-time dari beberap
 
 ## 📦 Struktur Folder
 
-```
 
 cuaca\_project/
 ├── dashboard/
@@ -42,7 +40,6 @@ cuaca\_project/
 ├── requirements.txt
 ├── README.md
 
-````
 
 ## ⚙️ Setup
 
@@ -117,7 +114,5 @@ Tambahkan baris berikut (setiap 30 menit):
 ## 📑 Lisensi
 
 MIT License – bebas digunakan, modifikasi, dan kontribusi.
-
-```
 
 ---
