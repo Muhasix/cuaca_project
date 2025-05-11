@@ -1,5 +1,6 @@
 # Abaikan virtual environment
 env/
+logs/
 
 # Abaikan file Python cache
 __pycache__/
@@ -15,3 +16,5 @@ __pycache__/
 .DS_Store
 .ipynb_checkpoints/
 .env
+.log
+.env.*

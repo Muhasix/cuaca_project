@@ -1,8 +1,9 @@
 import streamlit as st
 import pandas as pd
-import psycopg2
+from sqlalchemy import create_engine
+import time
 
-# Konfigurasi database
+# Konfigurasi database PostgreSQL
 DB_CONFIG = {
     "host": "localhost",
     "dbname": "cuaca_db",
@@ -10,54 +11,67 @@ DB_CONFIG = {
     "password": "cuaca_pass"
 }
 
+# Buat engine koneksi menggunakan SQLAlchemy
+db_url = f"postgresql://{DB_CONFIG['user']}:{DB_CONFIG['password']}@{DB_CONFIG['host']}/{DB_CONFIG['dbname']}"
+engine = create_engine(db_url)
+
+# Konfigurasi tampilan halaman
+st.set_page_config(page_title="Dashboard Cuaca", layout="wide")
+st.title("🌤️ Dashboard Cuaca Indonesia")
+
+# Interval refresh dalam detik
+REFRESH_INTERVAL = 60
+countdown = st.empty()
+
+# Fungsi ambil data terbaru dari database
+@st.cache_data(ttl=REFRESH_INTERVAL)
 def load_data():
-    try:
-        conn = psycopg2.connect(**DB_CONFIG)
-        query = "SELECT * FROM cuaca ORDER BY waktu DESC"
-        df = pd.read_sql(query, conn)
-        conn.close()
-        return df
-    except Exception as e:
-        st.error(f"❌ Gagal mengambil data: {e}")
-        return pd.DataFrame()
+    query = "SELECT * FROM cuaca ORDER BY waktu DESC LIMIT 500"
+    df = pd.read_sql(query, engine)
+    return df
 
-# Judul
-st.title("Dashboard Cuaca Jakarta (Realtime via PostgreSQL)")
+# Load data
+data = load_data()
 
-# Ambil data
-df = load_data()
-
-if not df.empty:
-    # Konversi kolom waktu
-    df["waktu"] = pd.to_datetime(df["waktu"])
-
-    # Sidebar filter
-    st.sidebar.header("Filter")
-
-    # Filter kota
-    kota_options = df["kota"].unique().tolist()
-    kota_terpilih = st.sidebar.selectbox("Pilih Kota", kota_options)
-
-    # Filter tanggal
-    tanggal_awal = st.sidebar.date_input("Dari Tanggal", df["waktu"].min().date())
-    tanggal_akhir = st.sidebar.date_input("Sampai Tanggal", df["waktu"].max().date())
-
-    # Terapkan filter
-    mask = (
-        (df["kota"] == kota_terpilih) &
-        (df["waktu"].dt.date >= tanggal_awal) &
-        (df["waktu"].dt.date <= tanggal_akhir)
-    )
-    df_filter = df.loc[mask]
-
-    # Tampilkan hasil
-    st.subheader(f"Data Cuaca: {kota_terpilih}")
-    st.dataframe(df_filter)
-
-    st.subheader("Suhu dari waktu ke waktu")
-    if not df_filter.empty:
-        st.line_chart(df_filter.sort_values("waktu").set_index("waktu")["suhu"])
-    else:
-        st.info("Tidak ada data pada rentang waktu tersebut.")
-else:
+if data.empty:
     st.warning("Data belum tersedia.")
+else:
+    # Pilih kota
+    kota_terpilih = st.multiselect(
+        "Pilih kota:",
+        options=sorted(data['kota'].unique()),
+        default=sorted(data['kota'].unique())
+    )
+
+    # Filter berdasarkan kota
+    data_filtered = data[data['kota'].isin(kota_terpilih)]
+
+    # Tampilkan tabel data
+    st.dataframe(data_filtered, use_container_width=True)
+
+    # Urutkan berdasarkan waktu
+    sorted_data = data_filtered.sort_values("waktu")
+
+    # Grafik Suhu Terbaru
+    st.subheader("🌡️ Grafik Suhu Terbaru")
+    chart_suhu = sorted_data.groupby("kota").head(10)
+    st.line_chart(chart_suhu.pivot(index="waktu", columns="kota", values="suhu"))
+
+    # Grafik Kelembapan Terbaru
+    st.subheader("💧 Grafik Kelembapan Terbaru")
+    chart_kelembapan = sorted_data.groupby("kota").head(10)
+    st.line_chart(chart_kelembapan.pivot(index="waktu", columns="kota", values="kelembapan"))
+
+    # Grafik Rata-Rata Suhu Harian
+    st.subheader("📈 Rata-Rata Suhu Harian per Kota")
+    daily_avg = sorted_data.copy()
+    daily_avg['tanggal'] = pd.to_datetime(daily_avg['waktu']).dt.date
+    avg_per_day = daily_avg.groupby(['tanggal', 'kota'])['suhu'].mean().reset_index()
+    st.line_chart(avg_per_day.pivot(index="tanggal", columns="kota", values="suhu"))
+
+# Auto-refresh countdown
+with st.empty():
+    for i in range(REFRESH_INTERVAL, 0, -1):
+        countdown.markdown(f"🔄 Auto-refresh dalam {i} detik...")
+        time.sleep(1)
+    st.rerun()

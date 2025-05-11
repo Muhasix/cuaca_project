@@ -10,3 +10,252 @@
 ✅ Data berhasil diambil dan disimpan.
 ✅ Data berhasil diambil dan disimpan.
 ✅ Data berhasil diambil dan disimpan.
+✅ Data berhasil diambil dan disimpan.
+❌ Gagal: HTTPConnectionPool(host='api.openweathermap.org', port=80): Max retries exceeded with url: /data/2.5/weather?q=Jakarta&appid=a967f3ab23ae4b6149de94cc5ba1276f&units=metric (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x7fccc07a46a0>: Failed to resolve 'api.openweathermap.org' ([Errno -3] Temporary failure in name resolution)"))
+✅ Data berhasil diambil dan disimpan.
+2025-05-11 12:57:09,469 - INFO - Fetching: Jakarta
+2025-05-11 12:57:09,541 - WARNING - Gagal ambil data Jakarta (percobaan 1): Invalid API key. Please see https://openweathermap.org/faq#error401 for more info.
+2025-05-11 12:57:12,621 - WARNING - Gagal ambil data Jakarta (percobaan 2): Invalid API key. Please see https://openweathermap.org/faq#error401 for more info.
+2025-05-11 12:57:18,427 - WARNING - Gagal ambil data Jakarta (percobaan 3): Invalid API key. Please see https://openweathermap.org/faq#error401 for more info.
+2025-05-11 12:57:21,430 - ERROR - Gagal ambil data dari Jakarta setelah 3 percobaan.
+2025-05-11 12:57:21,430 - ERROR - ❌ Jakarta: Gagal mengambil data.
+2025-05-11 12:57:21,430 - INFO - Fetching: Bandung
+2025-05-11 12:57:21,512 - WARNING - Gagal ambil data Bandung (percobaan 1): Invalid API key. Please see https://openweathermap.org/faq#error401 for more info.
+2025-05-11 12:57:24,597 - WARNING - Gagal ambil data Bandung (percobaan 2): Invalid API key. Please see https://openweathermap.org/faq#error401 for more info.
+2025-05-11 12:57:27,684 - WARNING - Gagal ambil data Bandung (percobaan 3): Invalid API key. Please see https://openweathermap.org/faq#error401 for more info.
+2025-05-11 12:57:30,687 - ERROR - Gagal ambil data dari Bandung setelah 3 percobaan.
+2025-05-11 12:57:30,687 - ERROR - ❌ Bandung: Gagal mengambil data.
+2025-05-11 12:57:30,687 - INFO - Fetching: Surabaya
+2025-05-11 12:57:30,764 - WARNING - Gagal ambil data Surabaya (percobaan 1): Invalid API key. Please see https://openweathermap.org/faq#error401 for more info.
+2025-05-11 12:57:33,848 - WARNING - Gagal ambil data Surabaya (percobaan 2): Invalid API key. Please see https://openweathermap.org/faq#error401 for more info.
+2025-05-11 12:57:36,934 - WARNING - Gagal ambil data Surabaya (percobaan 3): Invalid API key. Please see https://openweathermap.org/faq#error401 for more info.
+2025-05-11 12:57:39,936 - ERROR - Gagal ambil data dari Surabaya setelah 3 percobaan.
+2025-05-11 12:57:39,936 - ERROR - ❌ Surabaya: Gagal mengambil data.
+2025-05-11 12:57:39,936 - INFO - Fetching: Yogyakarta
+2025-05-11 12:57:40,017 - WARNING - Gagal ambil data Yogyakarta (percobaan 1): Invalid API key. Please see https://openweathermap.org/faq#error401 for more info.
+2025-05-11 12:57:43,096 - WARNING - Gagal ambil data Yogyakarta (percobaan 2): Invalid API key. Please see https://openweathermap.org/faq#error401 for more info.
+2025-05-11 12:57:46,176 - WARNING - Gagal ambil data Yogyakarta (percobaan 3): Invalid API key. Please see https://openweathermap.org/faq#error401 for more info.
+2025-05-11 12:57:49,177 - ERROR - Gagal ambil data dari Yogyakarta setelah 3 percobaan.
+2025-05-11 12:57:49,177 - ERROR - ❌ Yogyakarta: Gagal mengambil data.
+2025-05-11 12:57:49,177 - INFO - Fetching: Medan
+2025-05-11 12:57:52,177 - WARNING - Gagal ambil data Medan (percobaan 1): Invalid API key. Please see https://openweathermap.org/faq#error401 for more info.
+2025-05-11 12:57:55,265 - WARNING - Gagal ambil data Medan (percobaan 2): Invalid API key. Please see https://openweathermap.org/faq#error401 for more info.
+2025-05-11 12:57:58,350 - WARNING - Gagal ambil data Medan (percobaan 3): Invalid API key. Please see https://openweathermap.org/faq#error401 for more info.
+2025-05-11 12:58:01,351 - ERROR - Gagal ambil data dari Medan setelah 3 percobaan.
+2025-05-11 12:58:01,352 - ERROR - ❌ Medan: Gagal mengambil data.
+2025-05-11 12:58:01,352 - WARNING - ⚠️ Tidak ada data yang berhasil diambil.
+⚠️ Tidak ada data yang disimpan.
+2025-05-11 13:01:08,017 - INFO - Fetching: Jakarta
+2025-05-11 13:01:08,110 - WARNING - Gagal ambil data Jakarta (percobaan 1): Invalid API key. Please see https://openweathermap.org/faq#error401 for more info.
+2025-05-11 13:01:11,203 - WARNING - Gagal ambil data Jakarta (percobaan 2): Invalid API key. Please see https://openweathermap.org/faq#error401 for more info.
+2025-05-11 13:01:14,299 - WARNING - Gagal ambil data Jakarta (percobaan 3): Invalid API key. Please see https://openweathermap.org/faq#error401 for more info.
+2025-05-11 13:01:17,302 - ERROR - Gagal ambil data dari Jakarta setelah 3 percobaan.
+2025-05-11 13:01:17,302 - ERROR - ❌ Jakarta: Gagal mengambil data.
+2025-05-11 13:01:17,303 - INFO - Fetching: Bandung
+2025-05-11 13:01:17,394 - WARNING - Gagal ambil data Bandung (percobaan 1): Invalid API key. Please see https://openweathermap.org/faq#error401 for more info.
+2025-05-11 13:01:23,074 - WARNING - Gagal ambil data Bandung (percobaan 2): Invalid API key. Please see https://openweathermap.org/faq#error401 for more info.
+2025-05-11 13:01:26,170 - WARNING - Gagal ambil data Bandung (percobaan 3): Invalid API key. Please see https://openweathermap.org/faq#error401 for more info.
+2025-05-11 13:01:29,172 - ERROR - Gagal ambil data dari Bandung setelah 3 percobaan.
+2025-05-11 13:01:29,172 - ERROR - ❌ Bandung: Gagal mengambil data.
+2025-05-11 13:01:29,172 - INFO - Fetching: Surabaya
+2025-05-11 13:01:29,266 - WARNING - Gagal ambil data Surabaya (percobaan 1): Invalid API key. Please see https://openweathermap.org/faq#error401 for more info.
+2025-05-11 13:01:32,362 - WARNING - Gagal ambil data Surabaya (percobaan 2): Invalid API key. Please see https://openweathermap.org/faq#error401 for more info.
+2025-05-11 13:01:35,457 - WARNING - Gagal ambil data Surabaya (percobaan 3): Invalid API key. Please see https://openweathermap.org/faq#error401 for more info.
+2025-05-11 13:01:38,460 - ERROR - Gagal ambil data dari Surabaya setelah 3 percobaan.
+2025-05-11 13:01:38,460 - ERROR - ❌ Surabaya: Gagal mengambil data.
+2025-05-11 13:01:38,460 - INFO - Fetching: Yogyakarta
+2025-05-11 13:01:38,552 - WARNING - Gagal ambil data Yogyakarta (percobaan 1): Invalid API key. Please see https://openweathermap.org/faq#error401 for more info.
+2025-05-11 13:01:41,649 - WARNING - Gagal ambil data Yogyakarta (percobaan 2): Invalid API key. Please see https://openweathermap.org/faq#error401 for more info.
+2025-05-11 13:01:44,744 - WARNING - Gagal ambil data Yogyakarta (percobaan 3): Invalid API key. Please see https://openweathermap.org/faq#error401 for more info.
+2025-05-11 13:01:47,746 - ERROR - Gagal ambil data dari Yogyakarta setelah 3 percobaan.
+2025-05-11 13:01:47,746 - ERROR - ❌ Yogyakarta: Gagal mengambil data.
+2025-05-11 13:01:47,747 - INFO - Fetching: Medan
+2025-05-11 13:01:47,839 - WARNING - Gagal ambil data Medan (percobaan 1): Invalid API key. Please see https://openweathermap.org/faq#error401 for more info.
+2025-05-11 13:01:50,928 - WARNING - Gagal ambil data Medan (percobaan 2): Invalid API key. Please see https://openweathermap.org/faq#error401 for more info.
+2025-05-11 13:01:56,613 - WARNING - Gagal ambil data Medan (percobaan 3): Invalid API key. Please see https://openweathermap.org/faq#error401 for more info.
+2025-05-11 13:01:59,615 - ERROR - Gagal ambil data dari Medan setelah 3 percobaan.
+2025-05-11 13:01:59,615 - ERROR - ❌ Medan: Gagal mengambil data.
+2025-05-11 13:01:59,615 - WARNING - ⚠️ Tidak ada data yang berhasil diambil.
+2025-05-11 13:02:46,528 - INFO - Fetching: Jakarta
+2025-05-11 13:02:46,615 - WARNING - Gagal ambil data Jakarta (percobaan 1): Invalid API key. Please see https://openweathermap.org/faq#error401 for more info.
+2025-05-11 13:02:49,706 - WARNING - Gagal ambil data Jakarta (percobaan 2): Invalid API key. Please see https://openweathermap.org/faq#error401 for more info.
+2025-05-11 13:02:52,799 - WARNING - Gagal ambil data Jakarta (percobaan 3): Invalid API key. Please see https://openweathermap.org/faq#error401 for more info.
+2025-05-11 13:02:55,801 - ERROR - Gagal ambil data dari Jakarta setelah 3 percobaan.
+2025-05-11 13:02:55,801 - ERROR - ❌ Jakarta: Gagal mengambil data.
+2025-05-11 13:02:55,801 - INFO - Fetching: Bandung
+2025-05-11 13:02:55,906 - WARNING - Gagal ambil data Bandung (percobaan 1): Invalid API key. Please see https://openweathermap.org/faq#error401 for more info.
+2025-05-11 13:02:59,002 - WARNING - Gagal ambil data Bandung (percobaan 2): Invalid API key. Please see https://openweathermap.org/faq#error401 for more info.
+2025-05-11 13:03:02,096 - WARNING - Gagal ambil data Bandung (percobaan 3): Invalid API key. Please see https://openweathermap.org/faq#error401 for more info.
+2025-05-11 13:03:07,689 - ERROR - Gagal ambil data dari Bandung setelah 3 percobaan.
+2025-05-11 13:03:07,690 - ERROR - ❌ Bandung: Gagal mengambil data.
+2025-05-11 13:03:07,690 - INFO - Fetching: Surabaya
+2025-05-11 13:03:07,784 - WARNING - Gagal ambil data Surabaya (percobaan 1): Invalid API key. Please see https://openweathermap.org/faq#error401 for more info.
+2025-05-11 13:03:10,878 - WARNING - Gagal ambil data Surabaya (percobaan 2): Invalid API key. Please see https://openweathermap.org/faq#error401 for more info.
+2025-05-11 13:03:13,978 - WARNING - Gagal ambil data Surabaya (percobaan 3): Invalid API key. Please see https://openweathermap.org/faq#error401 for more info.
+2025-05-11 13:03:16,980 - ERROR - Gagal ambil data dari Surabaya setelah 3 percobaan.
+2025-05-11 13:03:16,980 - ERROR - ❌ Surabaya: Gagal mengambil data.
+2025-05-11 13:03:16,980 - INFO - Fetching: Yogyakarta
+2025-05-11 13:03:17,083 - WARNING - Gagal ambil data Yogyakarta (percobaan 1): Invalid API key. Please see https://openweathermap.org/faq#error401 for more info.
+2025-05-11 13:03:20,176 - WARNING - Gagal ambil data Yogyakarta (percobaan 2): Invalid API key. Please see https://openweathermap.org/faq#error401 for more info.
+2025-05-11 13:03:23,271 - WARNING - Gagal ambil data Yogyakarta (percobaan 3): Invalid API key. Please see https://openweathermap.org/faq#error401 for more info.
+2025-05-11 13:03:26,273 - ERROR - Gagal ambil data dari Yogyakarta setelah 3 percobaan.
+2025-05-11 13:03:26,273 - ERROR - ❌ Yogyakarta: Gagal mengambil data.
+2025-05-11 13:03:26,274 - INFO - Fetching: Medan
+2025-05-11 13:03:26,367 - WARNING - Gagal ambil data Medan (percobaan 1): Invalid API key. Please see https://openweathermap.org/faq#error401 for more info.
+2025-05-11 13:03:29,456 - WARNING - Gagal ambil data Medan (percobaan 2): Invalid API key. Please see https://openweathermap.org/faq#error401 for more info.
+2025-05-11 13:03:31,347 - INFO - Fetching: Jakarta
+2025-05-11 13:03:31,438 - WARNING - Gagal ambil data Jakarta (percobaan 1): Invalid API key. Please see https://openweathermap.org/faq#error401 for more info.
+2025-05-11 13:03:34,533 - WARNING - Gagal ambil data Jakarta (percobaan 2): Invalid API key. Please see https://openweathermap.org/faq#error401 for more info.
+2025-05-11 13:03:37,629 - WARNING - Gagal ambil data Jakarta (percobaan 3): Invalid API key. Please see https://openweathermap.org/faq#error401 for more info.
+2025-05-11 13:03:43,227 - ERROR - Gagal ambil data dari Jakarta setelah 3 percobaan.
+2025-05-11 13:03:43,227 - ERROR - ❌ Jakarta: Gagal mengambil data.
+2025-05-11 13:03:43,227 - INFO - Fetching: Bandung
+2025-05-11 13:03:43,322 - WARNING - Gagal ambil data Bandung (percobaan 1): Invalid API key. Please see https://openweathermap.org/faq#error401 for more info.
+2025-05-11 13:03:46,417 - WARNING - Gagal ambil data Bandung (percobaan 2): Invalid API key. Please see https://openweathermap.org/faq#error401 for more info.
+2025-05-11 13:03:49,497 - WARNING - Gagal ambil data Bandung (percobaan 3): Invalid API key. Please see https://openweathermap.org/faq#error401 for more info.
+2025-05-11 13:03:52,499 - ERROR - Gagal ambil data dari Bandung setelah 3 percobaan.
+2025-05-11 13:03:52,499 - ERROR - ❌ Bandung: Gagal mengambil data.
+2025-05-11 13:03:52,499 - INFO - Fetching: Surabaya
+2025-05-11 13:03:52,580 - WARNING - Gagal ambil data Surabaya (percobaan 1): Invalid API key. Please see https://openweathermap.org/faq#error401 for more info.
+2025-05-11 13:03:55,665 - WARNING - Gagal ambil data Surabaya (percobaan 2): Invalid API key. Please see https://openweathermap.org/faq#error401 for more info.
+2025-05-11 13:03:58,762 - WARNING - Gagal ambil data Surabaya (percobaan 3): Invalid API key. Please see https://openweathermap.org/faq#error401 for more info.
+2025-05-11 13:04:01,764 - ERROR - Gagal ambil data dari Surabaya setelah 3 percobaan.
+2025-05-11 13:04:01,764 - ERROR - ❌ Surabaya: Gagal mengambil data.
+2025-05-11 13:04:01,764 - INFO - Fetching: Yogyakarta
+2025-05-11 13:04:01,865 - WARNING - Gagal ambil data Yogyakarta (percobaan 1): Invalid API key. Please see https://openweathermap.org/faq#error401 for more info.
+2025-05-11 13:04:04,971 - WARNING - Gagal ambil data Yogyakarta (percobaan 2): Invalid API key. Please see https://openweathermap.org/faq#error401 for more info.
+2025-05-11 13:04:08,066 - WARNING - Gagal ambil data Yogyakarta (percobaan 3): Invalid API key. Please see https://openweathermap.org/faq#error401 for more info.
+2025-05-11 13:04:11,069 - ERROR - Gagal ambil data dari Yogyakarta setelah 3 percobaan.
+2025-05-11 13:04:11,069 - ERROR - ❌ Yogyakarta: Gagal mengambil data.
+2025-05-11 13:04:11,069 - INFO - Fetching: Medan
+2025-05-11 13:04:11,155 - WARNING - Gagal ambil data Medan (percobaan 1): Invalid API key. Please see https://openweathermap.org/faq#error401 for more info.
+2025-05-11 13:04:16,850 - WARNING - Gagal ambil data Medan (percobaan 2): Invalid API key. Please see https://openweathermap.org/faq#error401 for more info.
+2025-05-11 13:04:19,945 - WARNING - Gagal ambil data Medan (percobaan 3): Invalid API key. Please see https://openweathermap.org/faq#error401 for more info.
+2025-05-11 13:04:22,948 - ERROR - Gagal ambil data dari Medan setelah 3 percobaan.
+2025-05-11 13:04:22,949 - ERROR - ❌ Medan: Gagal mengambil data.
+2025-05-11 13:04:22,949 - WARNING - ⚠️ Tidak ada data yang berhasil diambil.
+2025-05-11 13:05:01,119 - INFO - Fetching: Jakarta
+2025-05-11 13:05:01,204 - WARNING - Gagal ambil data Jakarta (percobaan 1): Invalid API key. Please see https://openweathermap.org/faq#error401 for more info.
+2025-05-11 13:05:09,511 - WARNING - Gagal ambil data Jakarta (percobaan 2): Invalid API key. Please see https://openweathermap.org/faq#error401 for more info.
+2025-05-11 13:05:12,613 - WARNING - Gagal ambil data Jakarta (percobaan 3): Invalid API key. Please see https://openweathermap.org/faq#error401 for more info.
+2025-05-11 13:05:15,615 - ERROR - Gagal ambil data dari Jakarta setelah 3 percobaan.
+2025-05-11 13:05:15,615 - ERROR - ❌ Jakarta: Gagal mengambil data.
+2025-05-11 13:05:15,615 - INFO - Fetching: Bandung
+2025-05-11 13:05:15,695 - WARNING - Gagal ambil data Bandung (percobaan 1): Invalid API key. Please see https://openweathermap.org/faq#error401 for more info.
+2025-05-11 13:05:18,777 - WARNING - Gagal ambil data Bandung (percobaan 2): Invalid API key. Please see https://openweathermap.org/faq#error401 for more info.
+2025-05-11 13:05:21,873 - WARNING - Gagal ambil data Bandung (percobaan 3): Invalid API key. Please see https://openweathermap.org/faq#error401 for more info.
+2025-05-11 13:05:27,473 - ERROR - Gagal ambil data dari Bandung setelah 3 percobaan.
+2025-05-11 13:05:27,474 - ERROR - ❌ Bandung: Gagal mengambil data.
+2025-05-11 13:05:27,474 - INFO - Fetching: Surabaya
+2025-05-11 13:05:27,558 - WARNING - Gagal ambil data Surabaya (percobaan 1): Invalid API key. Please see https://openweathermap.org/faq#error401 for more info.
+2025-05-11 13:05:30,644 - WARNING - Gagal ambil data Surabaya (percobaan 2): Invalid API key. Please see https://openweathermap.org/faq#error401 for more info.
+2025-05-11 13:05:33,723 - WARNING - Gagal ambil data Surabaya (percobaan 3): Invalid API key. Please see https://openweathermap.org/faq#error401 for more info.
+2025-05-11 13:05:36,724 - ERROR - Gagal ambil data dari Surabaya setelah 3 percobaan.
+2025-05-11 13:05:36,724 - ERROR - ❌ Surabaya: Gagal mengambil data.
+2025-05-11 13:05:36,724 - INFO - Fetching: Yogyakarta
+2025-05-11 13:05:36,818 - WARNING - Gagal ambil data Yogyakarta (percobaan 1): Invalid API key. Please see https://openweathermap.org/faq#error401 for more info.
+2025-05-11 13:05:39,913 - WARNING - Gagal ambil data Yogyakarta (percobaan 2): Invalid API key. Please see https://openweathermap.org/faq#error401 for more info.
+2025-05-11 13:05:42,993 - WARNING - Gagal ambil data Yogyakarta (percobaan 3): Invalid API key. Please see https://openweathermap.org/faq#error401 for more info.
+2025-05-11 13:05:45,996 - ERROR - Gagal ambil data dari Yogyakarta setelah 3 percobaan.
+2025-05-11 13:05:45,996 - ERROR - ❌ Yogyakarta: Gagal mengambil data.
+2025-05-11 13:05:45,996 - INFO - Fetching: Medan
+2025-05-11 13:05:46,075 - WARNING - Gagal ambil data Medan (percobaan 1): Invalid API key. Please see https://openweathermap.org/faq#error401 for more info.
+2025-05-11 13:05:49,154 - WARNING - Gagal ambil data Medan (percobaan 2): Invalid API key. Please see https://openweathermap.org/faq#error401 for more info.
+2025-05-11 13:05:52,233 - WARNING - Gagal ambil data Medan (percobaan 3): Invalid API key. Please see https://openweathermap.org/faq#error401 for more info.
+2025-05-11 13:05:55,236 - ERROR - Gagal ambil data dari Medan setelah 3 percobaan.
+2025-05-11 13:05:55,236 - ERROR - ❌ Medan: Gagal mengambil data.
+2025-05-11 13:05:55,236 - WARNING - ⚠️ Tidak ada data yang berhasil diambil.
+None
+⚠️ Tidak ada data yang disimpan.
+2025-05-11 13:06:48,859 - INFO - Fetching: Jakarta
+2025-05-11 13:06:48,951 - WARNING - Gagal ambil data Jakarta (percobaan 1): Invalid API key. Please see https://openweathermap.org/faq#error401 for more info.
+2025-05-11 13:06:52,039 - WARNING - Gagal ambil data Jakarta (percobaan 2): Invalid API key. Please see https://openweathermap.org/faq#error401 for more info.
+2025-05-11 13:06:55,121 - WARNING - Gagal ambil data Jakarta (percobaan 3): Invalid API key. Please see https://openweathermap.org/faq#error401 for more info.
+2025-05-11 13:06:58,124 - ERROR - Gagal ambil data dari Jakarta setelah 3 percobaan.
+2025-05-11 13:06:58,124 - ERROR - ❌ Jakarta: Gagal mengambil data.
+2025-05-11 13:06:58,124 - INFO - Fetching: Bandung
+2025-05-11 13:06:58,206 - WARNING - Gagal ambil data Bandung (percobaan 1): Invalid API key. Please see https://openweathermap.org/faq#error401 for more info.
+2025-05-11 13:07:01,284 - WARNING - Gagal ambil data Bandung (percobaan 2): Invalid API key. Please see https://openweathermap.org/faq#error401 for more info.
+2025-05-11 13:07:04,377 - WARNING - Gagal ambil data Bandung (percobaan 3): Invalid API key. Please see https://openweathermap.org/faq#error401 for more info.
+2025-05-11 13:07:10,310 - ERROR - Gagal ambil data dari Bandung setelah 3 percobaan.
+2025-05-11 13:07:10,310 - ERROR - ❌ Bandung: Gagal mengambil data.
+2025-05-11 13:07:10,310 - INFO - Fetching: Surabaya
+2025-05-11 13:07:10,380 - WARNING - Gagal ambil data Surabaya (percobaan 1): Invalid API key. Please see https://openweathermap.org/faq#error401 for more info.
+2025-05-11 13:07:13,462 - WARNING - Gagal ambil data Surabaya (percobaan 2): Invalid API key. Please see https://openweathermap.org/faq#error401 for more info.
+2025-05-11 13:07:16,547 - WARNING - Gagal ambil data Surabaya (percobaan 3): Invalid API key. Please see https://openweathermap.org/faq#error401 for more info.
+2025-05-11 13:07:19,550 - ERROR - Gagal ambil data dari Surabaya setelah 3 percobaan.
+2025-05-11 13:07:19,550 - ERROR - ❌ Surabaya: Gagal mengambil data.
+2025-05-11 13:07:19,550 - INFO - Fetching: Yogyakarta
+2025-05-11 13:07:19,626 - WARNING - Gagal ambil data Yogyakarta (percobaan 1): Invalid API key. Please see https://openweathermap.org/faq#error401 for more info.
+2025-05-11 13:07:22,702 - WARNING - Gagal ambil data Yogyakarta (percobaan 2): Invalid API key. Please see https://openweathermap.org/faq#error401 for more info.
+2025-05-11 13:07:25,776 - WARNING - Gagal ambil data Yogyakarta (percobaan 3): Invalid API key. Please see https://openweathermap.org/faq#error401 for more info.
+2025-05-11 13:07:28,780 - ERROR - Gagal ambil data dari Yogyakarta setelah 3 percobaan.
+2025-05-11 13:07:28,780 - ERROR - ❌ Yogyakarta: Gagal mengambil data.
+2025-05-11 13:07:28,780 - INFO - Fetching: Medan
+2025-05-11 13:07:28,861 - WARNING - Gagal ambil data Medan (percobaan 1): Invalid API key. Please see https://openweathermap.org/faq#error401 for more info.
+2025-05-11 13:07:32,002 - WARNING - Gagal ambil data Medan (percobaan 2): Invalid API key. Please see https://openweathermap.org/faq#error401 for more info.
+2025-05-11 13:07:35,086 - WARNING - Gagal ambil data Medan (percobaan 3): Invalid API key. Please see https://openweathermap.org/faq#error401 for more info.
+2025-05-11 13:07:38,089 - ERROR - Gagal ambil data dari Medan setelah 3 percobaan.
+2025-05-11 13:07:38,089 - ERROR - ❌ Medan: Gagal mengambil data.
+2025-05-11 13:07:38,089 - WARNING - ⚠️ Tidak ada data yang berhasil diambil.
+2025-05-11 13:10:58,605 - INFO - Fetching: Jakarta
+2025-05-11 13:10:58,685 - WARNING - Gagal ambil data Jakarta (percobaan 1): Invalid API key. Please see https://openweathermap.org/faq#error401 for more info.
+2025-05-11 13:11:01,773 - WARNING - Gagal ambil data Jakarta (percobaan 2): Invalid API key. Please see https://openweathermap.org/faq#error401 for more info.
+2025-05-11 13:11:04,873 - WARNING - Gagal ambil data Jakarta (percobaan 3): Invalid API key. Please see https://openweathermap.org/faq#error401 for more info.
+None
+⚠️ Tidak ada data yang disimpan.
+2025-05-11 13:11:07,876 - ERROR - Gagal ambil data dari Jakarta setelah 3 percobaan.
+2025-05-11 13:11:07,876 - ERROR - ❌ Jakarta: Gagal mengambil data.
+2025-05-11 13:11:07,876 - INFO - Fetching: Bandung
+2025-05-11 13:11:07,954 - WARNING - Gagal ambil data Bandung (percobaan 1): Invalid API key. Please see https://openweathermap.org/faq#error401 for more info.
+2025-05-11 13:11:11,031 - WARNING - Gagal ambil data Bandung (percobaan 2): Invalid API key. Please see https://openweathermap.org/faq#error401 for more info.
+2025-05-11 13:11:14,109 - WARNING - Gagal ambil data Bandung (percobaan 3): Invalid API key. Please see https://openweathermap.org/faq#error401 for more info.
+2025-05-11 13:11:17,111 - ERROR - Gagal ambil data dari Bandung setelah 3 percobaan.
+2025-05-11 13:11:17,111 - ERROR - ❌ Bandung: Gagal mengambil data.
+2025-05-11 13:11:17,111 - INFO - Fetching: Surabaya
+2025-05-11 13:11:17,189 - WARNING - Gagal ambil data Surabaya (percobaan 1): Invalid API key. Please see https://openweathermap.org/faq#error401 for more info.
+2025-05-11 13:11:20,275 - WARNING - Gagal ambil data Surabaya (percobaan 2): Invalid API key. Please see https://openweathermap.org/faq#error401 for more info.
+2025-05-11 13:11:23,372 - WARNING - Gagal ambil data Surabaya (percobaan 3): Invalid API key. Please see https://openweathermap.org/faq#error401 for more info.
+2025-05-11 13:11:26,374 - ERROR - Gagal ambil data dari Surabaya setelah 3 percobaan.
+2025-05-11 13:11:26,375 - ERROR - ❌ Surabaya: Gagal mengambil data.
+2025-05-11 13:11:26,375 - INFO - Fetching: Yogyakarta
+2025-05-11 13:11:26,453 - WARNING - Gagal ambil data Yogyakarta (percobaan 1): Invalid API key. Please see https://openweathermap.org/faq#error401 for more info.
+2025-05-11 13:11:32,480 - WARNING - Gagal ambil data Yogyakarta (percobaan 2): Invalid API key. Please see https://openweathermap.org/faq#error401 for more info.
+2025-05-11 13:11:35,556 - WARNING - Gagal ambil data Yogyakarta (percobaan 3): Invalid API key. Please see https://openweathermap.org/faq#error401 for more info.
+2025-05-11 13:11:38,557 - ERROR - Gagal ambil data dari Yogyakarta setelah 3 percobaan.
+2025-05-11 13:11:38,557 - ERROR - ❌ Yogyakarta: Gagal mengambil data.
+2025-05-11 13:11:38,557 - INFO - Fetching: Medan
+2025-05-11 13:11:38,664 - WARNING - Gagal ambil data Medan (percobaan 1): Invalid API key. Please see https://openweathermap.org/faq#error401 for more info.
+2025-05-11 13:11:41,744 - WARNING - Gagal ambil data Medan (percobaan 2): Invalid API key. Please see https://openweathermap.org/faq#error401 for more info.
+2025-05-11 13:11:44,826 - WARNING - Gagal ambil data Medan (percobaan 3): Invalid API key. Please see https://openweathermap.org/faq#error401 for more info.
+2025-05-11 13:11:47,826 - ERROR - Gagal ambil data dari Medan setelah 3 percobaan.
+2025-05-11 13:11:47,826 - ERROR - ❌ Medan: Gagal mengambil data.
+2025-05-11 13:11:47,826 - WARNING - ⚠️ Tidak ada data yang berhasil diambil.
+2025-05-11 13:13:41,715 - INFO - Fetching: Jakarta
+2025-05-11 13:13:41,796 - INFO - ✅ Jakarta: Data berhasil diambil.
+2025-05-11 13:13:41,796 - INFO - Fetching: Bandung
+2025-05-11 13:13:41,889 - INFO - ✅ Bandung: Data berhasil diambil.
+2025-05-11 13:13:41,890 - INFO - Fetching: Surabaya
+2025-05-11 13:13:41,967 - INFO - ✅ Surabaya: Data berhasil diambil.
+2025-05-11 13:13:41,967 - INFO - Fetching: Yogyakarta
+2025-05-11 13:13:42,060 - INFO - ✅ Yogyakarta: Data berhasil diambil.
+2025-05-11 13:13:42,060 - INFO - Fetching: Medan
+2025-05-11 13:13:42,151 - INFO - ✅ Medan: Data berhasil diambil.
+2025-05-11 13:13:42,160 - INFO - 📦 Semua data berhasil disimpan ke database.
+a967f3ab23ae4b6149de94cc5ba1276f
+✅ Data berhasil disimpan.
+a967f3ab23ae4b6149de94cc5ba1276f
+✅ Data berhasil disimpan.
+a967f3ab23ae4b6149de94cc5ba1276f
+✅ Data berhasil disimpan.
+2025-05-11 13:32:43,856 - INFO - Fetching: Jakarta
+2025-05-11 13:32:43,945 - INFO - ✅ Jakarta: Data berhasil diambil.
+2025-05-11 13:32:43,945 - INFO - Fetching: Bandung
+2025-05-11 13:32:44,021 - INFO - ✅ Bandung: Data berhasil diambil.
+2025-05-11 13:32:44,021 - INFO - Fetching: Surabaya
+2025-05-11 13:32:44,100 - INFO - ✅ Surabaya: Data berhasil diambil.
+2025-05-11 13:32:44,100 - INFO - Fetching: Yogyakarta
+2025-05-11 13:32:44,186 - INFO - ✅ Yogyakarta: Data berhasil diambil.
+2025-05-11 13:32:44,186 - INFO - Fetching: Medan
+2025-05-11 13:32:44,344 - INFO - ✅ Medan: Data berhasil diambil.
+2025-05-11 13:32:44,353 - INFO - 📦 Semua data berhasil disimpan ke database.
